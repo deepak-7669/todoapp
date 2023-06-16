@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">TodoApp</string>
+    <string name="task_list">Task List</string>
+    <string name="pending">Pending</string>
+    <string name="benchmarking">Benchmarking</string>
+    <string name="_10_00_am">10:00 AM</string>
+    <string name="add_task">Add a task</string>
+    <string name="task_title">Task Title</string>
+    <string name="time">Time</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
+    <string-array name="spinnerArray">
+        <item>PM</item>
+        <item>AM</item>
+    </string-array>
 </resources>

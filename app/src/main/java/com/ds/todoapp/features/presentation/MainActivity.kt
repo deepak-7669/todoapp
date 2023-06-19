@@ -5,7 +5,8 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.PopupMenu
-import androidx.navigation.findNavController
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import com.ds.todoapp.R
 import com.ds.todoapp.databinding.ActivityMainBinding
 import com.ds.todoapp.features.domain.util.TodoOrder
@@ -15,6 +16,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private val mainViewModel: MainViewModel by viewModels()
     private lateinit var binding: ActivityMainBinding
+    private lateinit var navController: NavController
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,11 +28,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun initView() {
         addClickListeners()
+        addingNavHost()
         handleOnDestinationChangeListener()
     }
 
+    private fun addingNavHost() {
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main) as NavHostFragment
+        navController = navHostFragment.navController
+    }
+
     private fun handleOnDestinationChangeListener() {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
         navController.addOnDestinationChangedListener { _, destination, _ ->
             if (destination.id == R.id.addTodoFragment) {
                 addNewPageSetting()

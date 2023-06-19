@@ -9,8 +9,8 @@
         android:id="@+id/tvTaskListHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_35sdp"
         android:text="@string/task_list"
         android:textColor="@color/black"
         android:textSize="@dimen/_16sdp"
@@ -19,19 +19,16 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/tasksRecyclerView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_3sdp"
-        android:layout_marginTop="@dimen/_8sdp"
-        android:layout_marginEnd="@dimen/_3sdp"
-        android:layout_marginBottom="@dimen/_8sdp"
-        android:clipToPadding="false"
+        android:layout_marginTop="@dimen/_30sdp"
         tools:listitem="@layout/item_todo"
         tools:itemCount="4"
         android:paddingBottom="@dimen/_10sdp"
         android:background="@drawable/bg_task_list"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="@id/tvTaskListHeading"
         app:layout_constraintTop_toBottomOf="@id/tvTaskListHeading" />
 
 
@@ -40,12 +37,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="centerInside"
-        android:padding="@dimen/_10sdp"
+        app:fabSize="normal"
+        app:maxImageSize="@dimen/_13sdp"
+        android:src="@drawable/ic_add"
         android:layout_marginEnd="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_13sdp"
-        android:background="@drawable/bg_add_todo_button"
+        android:backgroundTint="@color/bg_fab"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_add" />
+       />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

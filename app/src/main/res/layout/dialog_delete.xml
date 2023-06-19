@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_delete_dialog"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/tvHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/warning"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:alpha="0.5"
+        android:text="@string/do_you_want_to_delete_classification_this_action_can_t_be_undone"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="@id/tvHeading"
+        app:layout_constraintTop_toBottomOf="@id/tvHeading" />
+
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_width="0dp"
+        android:textColor="@color/text_color_primary"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:text="@string/cancel"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintEnd_toStartOf="@id/tvOK"
+        app:layout_constraintTop_toTopOf="@id/tvOK" />
+
+    <TextView
+        android:id="@+id/tvOK"
+        android:layout_width="0dp"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/text_color_primary"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:text="@string/ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

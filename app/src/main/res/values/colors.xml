@@ -5,4 +5,6 @@
     <color name="light_pink">#ECE6F0</color>
     <color name="text_color_gray">#E6161717</color>
     <color name="text_color_primary">#6750A4</color>
+    <color name="text_color_red">#EF0000</color>
+    <color name="bg_fab">#ECE6F0</color>
 </resources>
